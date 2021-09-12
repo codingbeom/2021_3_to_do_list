@@ -3,14 +3,27 @@ const loginInput = document.querySelector("#login-form input");
 const getting = document.querySelector("#getting");
 
 const HIDDEN_CLASS = "hidden";
+const USERNAME_KEY = "username";
+
+const saveUserName = localStorage.getItem(USERNAME_KEY);
+
+if (saveUserName === null) {
+  loginForm.classList.remove(HIDDEN_CLASS);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  paintGetting(saveUserName);
+}
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  const userName = loginInput.value;
   loginForm.classList.add(HIDDEN_CLASS);
-  //getting.innerText = "Hello! " + userName;
-  getting.innerText = `Hello! ${userName}`;
-  getting.classList.remove(HIDDEN_CLASS);
+  const loginName = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, loginName);
+  paintGetting(loginName);
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
+function paintGetting(username) {
+  getting.innerText = "Hello! " + username;
+  //getting.innerText = `Hello! ${username}`;
+  getting.classList.remove(HIDDEN_CLASS);
+}
