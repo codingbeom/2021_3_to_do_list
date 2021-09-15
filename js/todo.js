@@ -10,6 +10,8 @@ todoForm.addEventListener("submit", handletodoSubmit);
 function deleteToDo(event) {
   const delTarget = event.target.parentElement;
   delTarget.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(delTarget.id));
+  saveToDo();
 }
 
 function addTodo(newTodo) {
