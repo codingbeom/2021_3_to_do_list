@@ -1,7 +1,4 @@
-const images = ["back1.jpg", "back2.jpg", "back3.jpg", "back4.jpg"];
+const images = ["1.jpg", "2.webp", "3.webp"];
 const randImg = images[Math.floor(Math.random() * images.length)];
 
-const bgImag = document.createElement("img");
-
-bgImag.src = "img/" + randImg;
-document.body.appendChild(bgImag);
+document.body.style.backgroundImage = `url('img/${randImg}')`;

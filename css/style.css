@@ -1,3 +1,7 @@
-.hidden {
-  display: none;
+@import "reset.css";
+
+body {
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
 }

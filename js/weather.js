@@ -13,6 +13,7 @@ function onGeoOK(position) {
       city.innerText = data.name;
     });
 } //다음강의에서 설명
+
 function onGeoError() {
   alert("Can't find you. No weather for you.");
 }
