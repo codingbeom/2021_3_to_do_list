@@ -8,21 +8,33 @@
     <title>My-Home</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log in</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="getting" class="hidden"></h1>
+    <div class="user-box" id="user-name">
+      <form id="login-form" class="hidden">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <button>Log in</button>
+      </form>
+      <h1 id="getting" class="hidden"></h1>
+    </div>
+    <div class="user-box" id="user-date">
+      <div class="user-box__date">
+        <span id="year"></span>
+        <span id="month"></span>
+        <span id="day"></span>
+        <span id="daily"></span>
+        <h2 id="clock">00:00:00</h2>
+      </div>
+    </div>
     <form id="todo-form">
       <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
-    <ul id="todo-list"></ul>
+    <div>
+      <ul id="todo-list"></ul>
+    </div>
     <div id="quote">
       <span></span>
       <span></span>
@@ -38,5 +50,6 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/border.js"></script>
   </body>
 </html>

@@ -4,4 +4,20 @@ body {
   background-size: cover;
   height: 100vh;
   background-position: center;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.user-box {
+  width: 35%;
+  padding: 30px;
+  margin: 20px 30px;
+  display: flex;
+  border-radius: 50px;
+}
+.user-box__date {
+  font-size: 30px;
 }
