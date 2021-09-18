@@ -1,14 +1,5 @@
-const borderColors = [
-  "rgba(255,0,0,0.6)",
-  "rgba(0,255,0,0.6)",
-  "rgba(0,0,255,0.6)",
-  "rgba(1,0,0,0.6)",
-  "rgba(255,0,255,0.6)",
-];
-const randomColor =
-  borderColors[Math.floor(Math.random() * borderColors.length)];
-const userBox = document.querySelector("#user-name");
-const userBox2 = document.querySelector("#user-date");
+const colors = ["rgba(255,0,0,0.4)", "rgba(0,255,0,0.4)", "rgba(0,0,255,0.4)"];
+const randColor = colors[Math.floor(Math.random() * colors.length)];
 
-userBox.style.backgroundColor = `${randomColor}`;
-userBox2.style.backgroundColor = `${randomColor}`;
+const loginBack = document.querySelector("#user-box");
+loginBack.style.backgroundColor = `${randColor}`;
