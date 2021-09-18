@@ -8,62 +8,71 @@
     <title>My-Home</title>
   </head>
   <body>
-    <div class="contents">
-      <div class="time-box">
-        <div class="time">
-          <span id="date"></span>
-          <span id="date-clock">00:00:00</span>
+    <div class="main-contents">
+      <div class="info-contents">
+        <div class="time-box">
+          <div class="time">
+            <span id="date"></span>
+            <br />
+            <span id="date-clock">00:00:00</span>
+          </div>
+        </div>
+
+        <div class="weather-box">
+          <div id="weather">
+            <span></span>
+            <br />
+            <span></span>
+            <br />
+            <span></span>
+          </div>
         </div>
       </div>
 
-      <div class="weather-box">
-        <div id="weather">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="input-contents">
+        <div class="login-box">
+          <div class="login">
+            <form class="hidden" id="login-form">
+              <span id="getting"></span>
+              <input
+                required
+                maxlength="15"
+                type="text"
+                placeholder="What is your name?"
+              />
+              <button>Log in</button>
+            </form>
+          </div>
         </div>
-      </div>
-
-      <div class="login-box">
-        <div class="login">
-          <form class="hidden" id="login-form">
-            <span id="getting"></span>
+        <div class="todo-box">
+          <form id="todo-form">
             <input
-              required
-              maxlength="15"
               type="text"
-              placeholder="What is your name?"
+              placeholder="Write a To Do and Press Enter"
+              required
             />
-            <button>Log in</button>
           </form>
         </div>
       </div>
 
-      <div>
-        <form id="todo-form">
-          <input
-            type="text"
-            placeholder="Write a To Do and Press Enter"
-            required
-          />
-        </form>
-      </div>
-
-      <div>
-        <ul id="todo-list"></ul>
+      <div class="output-contents">
+        <div>
+          <ul id="todo-list"></ul>
+        </div>
       </div>
     </div>
 
     <div id="quote">
       <span></span>
+      <br />
       <span></span>
     </div>
+
     <script src="js/login.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-    <script src="js/border.js"></script>
   </body>
 </html>
