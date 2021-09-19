@@ -1,6 +1,6 @@
 body {
   font-family: cursive;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   color: whitesmoke;
@@ -15,28 +15,33 @@ body {
 .main-contents {
   background-color: rgba(0, 0, 255, 0.2);
   width: 90%;
-  height: 80%;
-  margin: 20px;
+  height: 85%;
   padding: 10px;
   border-radius: 40px;
   display: flex;
   justify-content: flex-start;
+  margin: 10px 0px 30px 0px;
 }
 .info-contents {
   padding: 10px;
   border-radius: 40px;
   background-color: rgba(0, 0, 255, 0.3);
+  width: 33%;
+  margin: 10px 10px;
+  height: 95%;
 }
 .time-box {
   background-color: rgba(0, 0, 255, 0.5);
   padding: 20px;
   border-radius: 40px;
   margin-bottom: 30px;
+  box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .weather-box {
   background-color: rgba(0, 0, 255, 0.5);
   padding: 20px;
   border-radius: 40px;
+  box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .time {
@@ -52,4 +57,118 @@ body {
 .time-box > div span:last-child {
   font-weight: 600;
   font-size: 32px;
+}
+.weather-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+.weather-text span:nth-child(2) {
+  margin: 30px 0px;
+}
+.login-box {
+  background-color: rgba(0, 0, 255, 0.5);
+  padding: 20px;
+  border-radius: 40px;
+  margin-top: 30px;
+  box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.login input {
+  outline: none;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 50%;
+  font-size: 20px;
+}
+@keyframes focusInput {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.login input:focus-within {
+  animation: focusInput 1s ease-in-out forwards;
+}
+@keyframes buttonScale {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+.login button {
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 10px;
+  font-size: 20px;
+}
+.login button:hover {
+  animation: buttonScale 1s ease-in-out infinite;
+}
+.user {
+  font-size: xx-large;
+}
+.todo-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 255, 0.5);
+  padding: 20px;
+  border-radius: 40px;
+  margin-top: 10px;
+  box-shadow: 0px 1px 10px 10px rgba(0, 255, 0, 0.5);
+}
+.todo-box__img span {
+  font-size: 20px;
+  margin: 30px 0px;
+}
+.todo-box__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.5);
+  padding: 20px 20px 50px 20px;
+  border-radius: 40px;
+  margin-top: 30px;
+  box-shadow: 0px 1px 10px 10px rgba(255, 0, 255, 0.5);
+}
+.todo-box__img img {
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
+}
+.todo-input input {
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 94%;
+  font-size: 20px;
+  box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.todo-input input:focus-within {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    navy,
+    purple
+  );
+  color: white;
 }

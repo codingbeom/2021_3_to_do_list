@@ -41,5 +41,5 @@ const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)]; //0~9
 
-quote.innerText = todaysQuote.명언;
-author.innerText = todaysQuote.출처;
+quote.innerText = `명언 : ${todaysQuote.명언}`;
+author.innerText = `출처 : ${todaysQuote.출처}`;
