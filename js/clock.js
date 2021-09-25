@@ -15,8 +15,8 @@ function getClock() {
 function getDay() {
   const data = new Date();
   const year = String(data.getFullYear());
-  const month = String(data.getMonth()).padStart(2, "0");
-  const days = String(data.getDay()).padStart(2, "0");
+  const month = String(data.getMonth() + 1).padStart(2, "0");
+  const days = String(data.getDate()).padStart(2, "0");
   date.innerText = `${year}년 ${month}월 ${days}일`;
 }
 

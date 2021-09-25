@@ -12,7 +12,6 @@ function onGeoOK(position) {
       temp.innerText = data.main.temp + " °C";
       weather.innerText = data.weather[0].main;
       city.innerText = `${data.sys.country} / ${data.name}`;
-      console.log(data);
     });
 } //다음강의에서 설명
 function onGeoError() {

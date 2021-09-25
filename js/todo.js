@@ -15,16 +15,18 @@ function deleteToDo(event) {
 }
 
 function addTodo(newTodo) {
+  const todoPar = document.createElement("div");
   const todoBox = document.createElement("li");
   todoBox.id = newTodo.id;
   const todo = document.createElement("span");
   todo.innerText = newTodo.text;
   const delButton = document.createElement("button");
-  todoList.appendChild(todoBox);
+  todoList.appendChild(todoPar);
+  todoPar.appendChild(todoBox);
   todoBox.appendChild(todo);
   todoBox.appendChild(delButton);
   delButton.addEventListener("click", deleteToDo);
-  delButton.innerText = "❌";
+  delButton.innerText = "💥";
 }
 
 function handletodoSubmit(event) {
